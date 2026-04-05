@@ -1,0 +1,118 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+    flex:1; /* to make container take up remaining space */
+}
+
+
+.navbar{
+    height:5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #ff5733;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color:#222222 !important;  /*to override bootstrap default link color*/
+}
+
+/* footer */
+.f-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-links a:hover{
+    text-decoration: underline;
+}
+
+.f-links,.f-info-socials,.f-brand{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i{
+   margin-right: 0.6rem;
+    font-size: 1.2rem;
+}
+
+
+.f-info{
+    text-align: center;
+    height:8rem;
+    background-color: #ebebeb;
+    display:flex;  /* to align items horizontally */
+    flex-wrap: wrap; /* to move to next line if not enough space */
+    justify-content: center;  /* to center items horizontally */
+    align-items: space-evenly;  /* to center items vertically */
+}
+
+/* card */
+
+.listing-card{
+    border:none !important; /* to override bootstrap default border */
+    margin-bottom:2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width:100% !important;
+    object-fit: cover !important; /* to maintain aspect ratio and cover the entire area */
+}
+
+.card-body{
+    padding:0 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* card-effect */
+.card-img-overlay{
+    opacity:0;
+}
+
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white
+}
+
+/* create new listing */
+.add-btn{
+    background-color: #ff5733 !important;
+    border: none !important;
+}
+
+/* edit listing */
+.edit-btn{
+    background-color: #ff5733 !important;
+    border: none !important;
+   
+    
+}
+.card-img-top {
+  height: 250px;        /* choose any height you like */
+  width: 100%;          /* full width of card */
+  object-fit: cover;    /* crop image to fill box */
+  border-radius: 8px;   /* optional */
+}
+
+.btns{
+    display:flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
