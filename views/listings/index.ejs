@@ -91,8 +91,8 @@
             <div class="card-body">
                 <p class="card-text">
                    <b> <%= listing.title %></b><br>
-                    &#8377;<%= listing.price.toLocaleString("en-IN")%>/night
-                     <i class="tax-info">&nbsp; &nbsp;+15% gst</i>
+                   <span class="base-price">&#8377;<%= listing.price.toLocaleString("en-IN")%> /night</span>
+                   <span class="tax-info">&#8377;<%= (listing.price * 1.15).toLocaleString("en-IN")%> /night &nbsp;<i style="font-size: 0.8rem;">(incl. 15% GST)</i></span>
                 </p>
             </div>
     </div>
@@ -104,13 +104,15 @@
         let taxSwitch=document.getElementById("switchCheckDefault");
         taxSwitch.addEventListener("click",()=>{
             let taxInfo=document.getElementsByClassName("tax-info");
-            for(info of taxInfo){
-                if(info.style.display!="inline"){
-                    info.style.display="inline";
+            let basePrice=document.getElementsByClassName("base-price");
+            for (let i = 0; i < taxInfo.length; i++) {
+                if(taxInfo[i].style.display != "inline"){
+                    taxInfo[i].style.display = "inline";
+                    if(basePrice[i]) basePrice[i].style.display = "none";
                 }else{
-                    info.style.display="none";
+                    taxInfo[i].style.display = "none";
+                    if(basePrice[i]) basePrice[i].style.display = "inline";
                 }
-                
             }
         })
     </script>
